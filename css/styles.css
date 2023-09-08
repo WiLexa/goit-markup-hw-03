@@ -31,18 +31,34 @@ ol {
   margin-bottom: 0px;
   padding-left: 0px;
 }
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+}
 .list {
   list-style-type: none;
 }
 .link {
   text-decoration: none;
-  font-style: normal;
 }
 /* index/portfolio-header */
+.page-header-container {
+  display: flex;
+  justify-content: space-between;
+}
 .header {
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-style: normal;
 }
 .header-navigation {
+  width: 100%;
+  max-width: 452px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
 }
 .header-logo {
   color: var(--iris);
@@ -57,6 +73,8 @@ ol {
   color: var(--navy-blue);
 }
 .header-list {
+  column-gap: 40px;
+  display: flex;
 }
 .header-list-item {
   color: var(--navy-blue);
@@ -73,6 +91,8 @@ ol {
   font-style: normal;
 }
 .header-address-list {
+  column-gap: 40px;
+  display: flex;
 }
 .header-address-contacts {
   color: var(--slate);
@@ -90,16 +110,28 @@ ol {
 /* index-section-hero */
 .hero {
   background: var(--navy-blue);
+  padding-top: 188px;
+  padding-bottom: 188px;
+  height: 600px;
+  text-align: center;
+}
+.page-hero-container {
 }
 .hero-title {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 496px;
   color: var(--white);
-  text-align: center;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
 }
 .hero-button {
+  border-radius: 4px;
+  border: none;
+  margin-top: 48px;
+  padding: 16px 32px;
   color: var(--white);
   font-family: "Roboto", sans-serif;
   background: var(--iris);
@@ -107,7 +139,6 @@ ol {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  cursor: pointer;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -117,10 +148,33 @@ ol {
 /* ---------------------------------------------- */
 /* index-section-advantages */
 .advantages {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .advantages-list {
+  display: flex;
+  column-gap: 24px;
+}
+
+.advantages-list-item {
+  width: calc((100% - 72px px) / 4);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .advantages-subtitle {
+  margin-bottom: 8px;
   color: var(--navy-blue);
   font-size: 20px;
   font-weight: 500;
@@ -155,8 +209,11 @@ ol {
 /* index-seaction-team */
 .team {
   background: var(--cloud);
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .team-heading {
+  text-align: center;
   color: var(--navy-blue);
   text-align: center;
   font-size: 36px;
@@ -164,13 +221,23 @@ ol {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 .team-list {
+  display: flex;
+  column-gap: 24px;
 }
 .team-img {
   background-color: #ffffff;
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-text-container {
+  text-align: center;
+  padding: 32px 0;
 }
 .team-name {
+  margin-bottom: 8px;
   color: var(--navy-blue);
   font-size: 20px;
   font-weight: 500;
@@ -205,8 +272,39 @@ ol {
   color: var(--white);
   background-color: var(--ocean);
 } */
-.content-list {
+
+.Portfolio-our {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+
+.our-heading {
+  color: #2e2f42;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.content-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+.item-our-portfolio {
+  width: calc((100% - 48px) / 3);
+}
+
+.conteiner-our-portfolio {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
 .content-link {
   color: var(--navy-blue);
   font-size: 20px;
@@ -215,6 +313,7 @@ ol {
   letter-spacing: 0.02em;
 }
 .content-title {
+  margin-bottom: 8px;
   color: var(--navy-blue);
   font-size: 20px;
   font-weight: 500;
@@ -232,9 +331,14 @@ ol {
 /* ---------------------------------------------- */
 /* index/portfolio-seaction-footer */
 .footer {
+  padding-bottom: 100px;
+  padding-top: 100px;
   background: var(--navy-blue);
 }
-.header-logo {
+.footer-logo {
+  margin-bottom: 16px;
+  display: inline-block;
+  margin-right: 76px;
   color: var(--iris);
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -247,6 +351,7 @@ ol {
   color: var(--cloud);
 }
 .footer-text {
+  width: 264px;
   color: var(--cloud);
   font-size: 16px;
   font-weight: 400;
@@ -255,8 +360,10 @@ ol {
 }
 /* index/portfolio-seaction-footer */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
