@@ -311,13 +311,6 @@ img {
   border-top: none;
 }
 
-.content-link {
-  color: var(--navy-blue);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-}
 .content-title {
   margin-bottom: 8px;
   color: var(--navy-blue);
