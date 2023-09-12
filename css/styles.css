@@ -49,6 +49,7 @@ img {
   justify-content: space-between;
 }
 .header {
+  border-bottom: 1px solid var(--cornflower);
   padding-top: 24px;
   padding-bottom: 24px;
   font-style: normal;
@@ -61,6 +62,7 @@ img {
   display: flex;
 }
 .header-logo {
+  margin-right: 76px
   color: var(--iris);
   font-family: "Raleway", sans-serif;
   font-size: 18px;
